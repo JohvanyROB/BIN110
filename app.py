@@ -47,7 +47,7 @@ parser.add_argument("-p", "--period", help="Period between two consecutive moves
 args = parser.parse_args()
 
 if os.name == "nt": #if you are on Windows
-    screen_resolution_to_fix = False  #Set this boolean to True if you face window resolution issues
+    screen_resolution_to_fix = True  #Set this boolean to True if you face window resolution issues
     if screen_resolution_to_fix:
         import ctypes
         ctypes.windll.shcore.SetProcessDpiAwareness(1)  #Resolve the window resolution issue
@@ -59,9 +59,8 @@ environment = game.get_env()
 
 gui = GUI(player_pose=player_info["pose"], env=environment, player_name=args.player_name)
 
-#TODO: Decommenter les 2 lignes suivantes uniquement apres validation de l'etape 1!
-# t = Thread(target=thread_function, daemon=True)
-# t.start()
+t = Thread(target=thread_function, daemon=True)
+t.start()
 
 try:
     while gui.running:
