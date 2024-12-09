@@ -3,8 +3,8 @@
 ## Installation des dépendences
 Dans un terminal, exécutez l'une des instructions suivantes en fonction du système d'exploitation de votre ordinateur:
 ```bash
-pip3 install numpy==1.24.4 pygame ( MAC OS, Linux)
-pip install numpy==1.26.4 pygame ( Windows )
+pip3 install numpy==1.24.4 pygame #( MAC OS, Linux)
+pip install numpy==1.26.4 pygame #( Windows )
 ```
 
 ## Téléchargement du projet
